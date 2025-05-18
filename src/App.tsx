@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "./context/ThemeContext";
 import Header from "./components/Header";
@@ -35,12 +40,13 @@ function App() {
               <Route path="/work" element={<Work />} />
               <Route
                 path="/services"
-                element={(() => {
-                  window.location.href =
-                    "https://gray-tarsier-942800.hostingersite.com/";
-                  return null;
-                })()}
-              />
+                element={
+                  <Navigate
+                    to="https://gray-tarsier-942800.hostingersite.com/"
+                    replace
+                  />
+                }
+              />{" "}
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
