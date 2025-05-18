@@ -33,7 +33,14 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/work" element={<Work />} />
-              <Route path="/services" element={<Services />} />
+              <Route
+                path="/services"
+                element={(() => {
+                  window.location.href =
+                    "https://gray-tarsier-942800.hostingersite.com/";
+                  return null;
+                })()}
+              />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
