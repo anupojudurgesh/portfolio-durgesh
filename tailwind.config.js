@@ -1,0 +1,106 @@
+export default {
+  content: [
+    "./src/**/*.{html,js,ts,jsx,tsx}",
+    "app/**/*.{ts,tsx}",
+    "components/**/*.{ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        "basic-pink": "var(--basic-pink)",
+        "basic-tag-black": "var(--basic-tag-black)",
+        "basic-white": "var(--basic-white)",
+        basicblack: "var(--basicblack)",
+        "button-textteal": "var(--button-textteal)",
+        "button-textyellow": "var(--button-textyellow)",
+        "dark-nav-bg": "var(--dark-nav-bg)",
+        "darklight-gray": "var(--darklight-gray)",
+        "darkmain-bg": "var(--darkmain-bg)",
+        "darkprimary-text": "var(--darkprimary-text)",
+        "gradient-text-colorsky-3c": "var(--gradient-text-colorsky-3c)",
+        "gradient-text-colorsunset-2c": "var(--gradient-text-colorsunset-2c)",
+        "lightlight-gray": "var(--lightlight-gray)",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      fontFamily: {
+        "10-10-bold": "var(--10-10-bold-font-family)",
+        "12-12-med": "var(--12-12-med-font-family)",
+        "13-13-med": "var(--13-13-med-font-family)",
+        "15-15-reg": "var(--15-15-reg-font-family)",
+        "16-16-bold": "var(--16-16-bold-font-family)",
+        "16-16-med": "var(--16-16-med-font-family)",
+        "16-16-reg": "var(--16-16-reg-font-family)",
+        "16-16-semib": "var(--16-16-semib-font-family)",
+        "18-18-med": "var(--18-18-med-font-family)",
+        "18-18-semib": "var(--18-18-semib-font-family)",
+        "20-20-med": "var(--20-20-med-font-family)",
+        "20-20-reg": "var(--20-20-reg-font-family)",
+        "section-title-desktop": "var(--section-title-desktop-font-family)",
+        sans: [
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
+      },
+      boxShadow: { "cursor-shadow": "var(--cursor-shadow)" },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+    container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },
+  },
+  plugins: [],
+  darkMode: ["class"],
+};
