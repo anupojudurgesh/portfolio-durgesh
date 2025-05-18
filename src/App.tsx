@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import Work from "./pages/Work";
 import Services from "./pages/Services";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Contact from "./pages/ContactPage";
 import Layout from "./components/Layout";
 
 function App() {

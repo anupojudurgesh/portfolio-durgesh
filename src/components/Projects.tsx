@@ -175,7 +175,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowBigLeft, Eye, MoveUpRight } from "lucide-react";
+import { MoveUpRight, ArrowUpFromDot, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Project Data
 const projects = [
@@ -183,7 +184,7 @@ const projects = [
     id: 1,
     title: "APIGen",
     category: "Development",
-    description: "Designed and developed an enterprise API testing tool",
+    description: "AI-powered tool to generate and run API test cases",
     image: "/APIGen2.png",
     year: "2024 - Present",
     link: "https://example.com",
@@ -193,7 +194,7 @@ const projects = [
     id: 2,
     title: "Label Design",
     category: "Design",
-    description: "Beautifully crafted open source 3D icons",
+    description: "Creative and print-ready labels for product branding",
     image: "/label design.png",
     year: 2025,
     link: "https://example.com",
@@ -202,7 +203,7 @@ const projects = [
     id: 3,
     title: "Travel Website",
     category: "Development",
-    description: "Beautifully crafted open source 3D icons",
+    description: "Responsive site to explore and book travel packages",
     image: "/travel website2.png",
     year: 2025,
     link: "https://example.com",
@@ -211,7 +212,7 @@ const projects = [
     id: 4,
     title: "Logo Design",
     category: "Branding",
-    description: "Beautifully crafted open source 3D icons",
+    description: "Unique logo concepts crafted for strong brand recall",
     image: "/logos.png",
     year: 2023,
     link: "https://example.com",
@@ -220,7 +221,7 @@ const projects = [
     id: 5,
     title: "Static Websites",
     category: "Development",
-    description: "Beautifully crafted open source 3D icons",
+    description: "Clean and fast-loading websites built with HTML/CSS",
     image: "/websites.png",
     year: 2024,
     link: "https://example.com",
@@ -229,7 +230,7 @@ const projects = [
     id: 6,
     title: "Brochure Designs",
     category: "Design",
-    description: "Beautifully crafted open source 3D icons",
+    description: "Elegant layouts for promotional business brochures",
     image: "brouchure.png",
     year: 2024,
     link: "https://example.com",
@@ -255,12 +256,21 @@ const Projects = () => {
   };
 
   return (
-    <section id="work" className="py-20 ">
+    <section id="work" className="py-10 ">
       <div className="container mx-auto  relative z-10">
-        <div className="mb-6 text-start">
+        <div className="mb-6 text-start flex justify-between">
           <h2 className="text-base font-semibold text-gray-600 dark:text-gray-400 opacity-30 uppercase tracking-[.25em] mb-2">
             FEATURED PROJECTS
           </h2>
+          <Link
+            to="/work"
+            className="text-sm font-semibold text-gray-600 dark:text-gray-400 opacity-30 mb-2 flex cursor-pointer hover:text-gray-800 dark:hover:text-gray-200 transition-colors"
+          >
+            All Works
+            <span>
+              <ArrowUpRight className="w-4 h-4 mt-1 ml-1" />
+            </span>
+          </Link>
         </div>
 
         <motion.div
@@ -274,7 +284,7 @@ const Projects = () => {
             <motion.div
               key={project.id}
               variants={item}
-              className={`relative group rounded-2xl bg-gradient-to-br from-[rgba(35,74,99,0.2)] via-[rgba(86,108,236,0.1)] to-[rgba(215,73,175,0.08)] border border-[rgba(255,255,255,0.08)] 
+              className={`relative group rounded-2xl [background:linear-gradient(90deg,rgba(30,28,50,0.05)_0%,rgba(43,22,29,0.05)_100%)] dark:[background:linear-gradient(90deg,rgba(30,28,50,0.5)_0%,rgba(43,22,29,0.5)_100%)]
 overflow-hidden transition-transform duration-300 hover:scale-[1.03]
 `}
               onMouseEnter={() => setHoveredProject(project.id)}
@@ -285,16 +295,16 @@ overflow-hidden transition-transform duration-300 hover:scale-[1.03]
                   hoveredProject === project.id ? "blur-md  " : ""
                 }`}
               >
-                <div className="px-10 py-10">
+                <div className="px-10 py-10 drop-shadow-2xl ">
                   <div className="aspect-w-1 aspect-h-1 w-full flex justify-center items-end ">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-[200px] h-[200px] object-cover transition-all duration-300 shadow-2xl
+                      className={`w-[150px] h-[150px] object-cover transition-all duration-300 
                       `}
                     />
                     {project.featured && (
-                      <span className="absolute top-8 left-26 bg-purple-600 text-white text-xs px-2 py-1 flex rounded-full z-10">
+                      <span className="absolute top-8 left-26 bg-purple-600/50 text-white text-xs px-2 py-1 flex rounded-full z-10">
                         In Progress
                       </span>
                     )}
@@ -325,7 +335,7 @@ overflow-hidden transition-transform duration-300 hover:scale-[1.03]
                   </h4>
                   <p className="text-gray-300 text-sm">{project.description}</p>
                   <div className="flex items-center justify-center mt-2">
-                    <MoveUpRight className="w-6 h-6 px-1 py-1 bg-white dark:bg-gray-800 rounded-full " />
+                    <MoveUpRight className="w-6 h-6 px-1 py-1 text-gray-100 bg-gray-900 dark:bg-gray-200 dark:text-gray-900 rounded-md " />
                   </div>
                 </button>
               </div>

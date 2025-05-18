@@ -37,17 +37,43 @@ export const Footer = (): JSX.Element => {
           ))}
         </nav>
       </div>
-
       {/* Footer quote with decorative elements */}
-      <div className="relative w-full max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-20 mx-auto mt-16 mb-12">
-        <div className="absolute top-[-6px] bottom-0 left-1/2 transform -translate-x-1/2  text-gray-500 text-center whitespace-nowrap">
-          {/* stay hungry, stay foolish */}
+      {/* <div className="relative w-full max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-20 mx-auto mt-16 mb-12">
+        <div className="absolute top-[-6px] bottom-0 left-1/2 transform -translate-x-1/2 text-base  text-gray-500 text-center whitespace-nowrap">
+
           Keep it simple, stupid!.
         </div>
         <div className="absolute w-[90px] md:w-[227px] h-3.5 top-px left-0 opacity-40 bg-[url(/group-1938.png)] bg-[100%_100%] bg-no-repeat" />
         <div className="absolute w-[90px] md:w-[227px] h-3.5 top-px right-0 rotate-180 opacity-40">
           <img
             className="absolute w-full h-full top-0 left-0 -rotate-180"
+            alt="Group"
+            src="/group-1938-1.png"
+          />
+        </div>
+      </div> */}
+      {/* Footer quote with decorative elements */}
+
+      <div className="relative w-[454px] max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-20 mx-auto mt-16 mb-12 z-0">
+        <div className="text-center absolute top-[-6px] bottom-0 left-1/2 transform -translate-x-1/2 text-base text-gray-400  ">
+          Keep it simple, stupid!.
+        </div>
+
+        {/* Light theme images */}
+        <div className="absolute w-[127px] h-3.5 top-px left-0  bg-[url(/Rightbar.png)] bg-[100%_100%] bg-no-repeat dark:hidden" />
+        <div className="absolute w-[127px] h-3.5 top-px left-[330px] rotate-180  bg-no-repeat dark:hidden">
+          <img
+            className="absolute w-[127px] h-3.5 top-0 left-0 -rotate-180"
+            alt="Group"
+            src="/Leftbar.png"
+          />
+        </div>
+
+        {/* Dark theme images */}
+        <div className="absolute w-[127px] h-3.5 top-px left-0 opacity-50 bg-[url(/group-1938.png)] bg-[100%_100%] bg-no-repeat hidden dark:block" />
+        <div className="absolute w-[127px] h-3.5 top-px left-[330px] rotate-180 opacity-50 bg-no-repeat hidden dark:block">
+          <img
+            className="absolute w-[127px] h-3.5 top-0 left-0 -rotate-180"
             alt="Group"
             src="/group-1938-1.png"
           />

@@ -1,9 +1,19 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import {
+  Moon,
+  Sun,
+  Menu,
+  X,
+  Instagram,
+  Facebook,
+  FacebookIcon,
+  Github,
+} from "lucide-react";
 import { Youtube, Twitter } from "lucide-react";
-import { FaFigma } from "react-icons/fa";
+import { FaFacebook, FaFigma, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa6";
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
@@ -33,10 +43,10 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-12 left-0 right-0 z-50 transition-all duration-300 max-w-3xl mx-auto rounded-full px-6 py-4 ${
+      className={`fixed top-12 left-0 right-0 z-50 transition-all duration-300 max-w-[700px] mx-auto rounded-full px-6 py-4 ${
         isScrolled
-          ? "bg-white/70 dark:bg-gray-900/80 shadow-md backdrop-blur-xl border border-gray-200/30 dark:border-gray-700/10"
-          : "bg-white/30 dark:bg-gray-900/30 border border-gray-200/10 dark:border-gray-500/40 backdrop-blur-xl "
+          ? "bg-white/70 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-200/10 dark:border-gray-100/5"
+          : "bg-white/30 dark:bg-gray-900/30 border border-gray-200/10 dark:border-gray-400/10 backdrop-blur-xl "
       }`}
     >
       <div className="flex items-center justify-between">
@@ -49,14 +59,14 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden md:flex items-center space-x-3">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path;
             return (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative text-base font-medium transition-all duration-300 ease-in-out
+                className={`relative text-base font-medium transition-all duration-300 ease-in-out tracking-tight
                   ${
                     isActive
                       ? "text-gray-900 dark:text-white"
@@ -76,9 +86,9 @@ const Header = () => {
             href="https://youtube.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-300 hover:text-red-500"
+            className="text-gray-600 dark:text-gray-300 hover:text-green-500"
           >
-            <Youtube className="w-5 h-5" />
+            <FaWhatsapp className="w-5 h-5" />
           </a>
           <a
             href="https://figma.com"
@@ -86,15 +96,15 @@ const Header = () => {
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-300 hover:text-pink-500"
           >
-            <FaFigma className="w-5 h-5" />
+            <Instagram className="w-5 h-5" />
           </a>
           <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-300 hover:text-sky-500"
+            className="text-gray-600 dark:text-gray-300 hover:text-gray-500"
           >
-            <Twitter className="w-5 h-5" />
+            <Github className="w-5 h-5" />
           </a>
 
           {/* Divider */}
@@ -103,7 +113,7 @@ const Header = () => {
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-900 transition-colors"
+            className=" p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-900 transition-colors"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (

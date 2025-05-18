@@ -61,10 +61,9 @@ export const HomeDark = (): JSX.Element => {
         </div>
 
         {/* Main content */}
-        <div className=" max-w-4xl mx-auto flex-1 z-10 ">
+        <div className=" max-w-3xl mx-auto flex-1 z-10 ">
           <Header />
           <Hero />
-          {/* Featured Projects section */}
           <Projects />
           <Experience />
           <SayHi />
