@@ -15,6 +15,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/ContactPage";
 import Layout from "./components/Layout";
+import RedirectToExternal from "./pages/RedirectToExternal";
 
 function App() {
   return (
@@ -38,15 +39,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/work" element={<Work />} />
-              <Route
-                path="/services"
-                element={
-                  <Navigate
-                    to="https://gray-tarsier-942800.hostingersite.com/"
-                    replace
-                  />
-                }
-              />{" "}
+              <Route path="/services" element={<RedirectToExternal />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
