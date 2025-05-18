@@ -1,1 +1,0 @@
-export { SayHiByAnima } from "./SayHiByAnima";
