@@ -46,12 +46,12 @@ export const HomeDark = (): JSX.Element => {
       <div
         className="
     relative w-full max-w-full min-h-screen overflow-hidden
-    bg-light-noise dark:bg-dark-noise                       /* background images */
-    bg-opacity-5 dark:bg-opacity-0                          /* normal bg-color opacity */
+    bg-light-noise dark:bg-dark-noise                      
+    bg-opacity-5 dark:bg-opacity-0                         
     bg-repeat bg-fixed bg-[length:auto_auto]
     before:absolute before:inset-0
-    before:bg-light-noise dark:before:bg-dark-noise         /* same images */
-    before:opacity-10 dark:before:opacity-10                /* ✅ image opacity here */
+    before:bg-light-noise dark:before:bg-dark-noise        
+    before:opacity-10 dark:before:opacity-10                
     before:pointer-events-none before:z-0
   "
       >

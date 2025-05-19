@@ -45,8 +45,8 @@ const Header = () => {
     <header
       className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 
       mx-6 sm:mx-4 md:mx-auto sm:mt-8
-      max-w-full sm:max-w-[90vw] md:max-w-[700px]
-      rounded-2xl md:rounded-full px-3 sm:px-6 py-4 sm:py-4
+      max-w-full sm:max-w-[90vw] md:max-w-[700px] rounded-full 
+      md:rounded-full px-5 sm:px-6 py-4 sm:py-4
       ${
         isScrolled
           ? "bg-white/70 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-200/10 dark:border-gray-100/5"
@@ -129,7 +129,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+            className="md:hidden  hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -150,7 +150,7 @@ const Header = () => {
             : "-translate-y-4 opacity-0 invisible"
         }`}
       >
-        <div className="bg-white dark:bg-gray-950 shadow-lg  rounded-b-2xl border-t border-gray-200 dark:border-gray-800">
+        <div className="bg-white dark:bg-gray-950 shadow-lg mt-2 flex justify-center text-center  rounded-2xl border-t border-gray-200 dark:border-gray-800">
           <div className="container mx-auto px-1 sm:px-4 py-4">
             <div className="flex">
               {navLinks.map((link) => {

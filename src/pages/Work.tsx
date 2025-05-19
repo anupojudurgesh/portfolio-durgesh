@@ -3,6 +3,7 @@ import { Eye } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
+import DecorativeBar from "../components/DecorativeBar";
 
 const projects = [
   {
@@ -74,7 +75,10 @@ const Work = () => {
       {" "}
       <Layout>
         <Header />
-        <section id="work" className="py-10 mt-32 ">
+        <section
+          id="work"
+          className="py-10 mt-20 sm:mt-32 px-2 sm:px-6 md:px-8"
+        >
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold   mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-l from-pink-500 via-purple-500 to-blue-500">
@@ -84,8 +88,8 @@ const Work = () => {
                 It has been an absolute pleasure to put my heart and soul into
                 these projects. While you're here, browse these projects.
               </p>
-              <div className="relative w-[454px] max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-80 mx-auto mt-16 mb-12 ">
-                <div className="text-center absolute top-[-6px] bottom-0 left-1/2 transform -translate-x-1/2 text-base text-gray-400  ">
+              {/* <div className="relative w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-80 mx-auto mt-8 sm:mt-16 mb-8 sm:mb-12">
+                <div className="text-center absolute top-[-6px] bottom-0 left-1/2 transform -translate-x-1/2 text-base text-gray-400 w-2xl max-w-xs sm:w-3xl md:max-w-xl lg:max-w-2xl">
                   <img
                     className="w-full dark:hidden"
                     alt="Group"
@@ -99,25 +103,26 @@ const Work = () => {
                 </div>
 
                 {/* Light theme images */}
-                <div className="absolute w-[187px] h-3.5 top-[-6px] left-0  opacity-20 bg-[url(/lightbar.png)] bg-[100%_100%] bg-no-repeat dark:hidden" />
-                <div className="absolute w-[127px] h-3.5 top-[-6px] left-[270px] opacity-20 rotate-180  bg-no-repeat dark:hidden">
+              {/* <div className="absolute h-3.5 top-[-6px] left-0 opacity-20 bg-[url(/lightbar.png)] bg-[100%_100%] bg-no-repeat dark:hidden w-[90px] sm:w-[187px]" />
+                <div className="absolute h-3.5 top-[-6px] right-0 opacity-20 rotate-180 bg-no-repeat dark:hidden w-[60px] sm:w-[127px]">
                   <img
-                    className="absolute w-[127px] h-3.5 top-0 left-0 -rotate-180"
+                    className="absolute h-3.5 w-full top-0 left-0 -rotate-180"
                     alt="Group"
                     src="/lightbar2.png"
                   />
                 </div>
 
                 {/* Dark theme images */}
-                <div className="absolute w-[187px] h-3.5 top-[-6px] left-0 opacity-30 bg-[url(/group-1938.png)] bg-[100%_100%] bg-no-repeat hidden dark:block" />
-                <div className="absolute w-[127px] h-3.5 top-[-6px] left-[270px] rotate-180 opacity-30 bg-no-repeat hidden dark:block">
+              {/* <div className="absolute h-3.5 top-[-6px] left-0 opacity-30 bg-[url(/group-1938.png)] bg-[100%_100%] bg-no-repeat hidden dark:block w-[90px] sm:w-[187px]" />
+                <div className="absolute h-3.5 top-[-6px] right-0 rotate-180 opacity-30 bg-no-repeat hidden dark:block w-[60px] sm:w-[127px]">
                   <img
-                    className="absolute w-[127px] h-3.5 top-0 left-0 -rotate-180"
+                    className="absolute h-3.5 w-full top-0 left-0 -rotate-180"
                     alt="Group"
                     src="/group-1938-1.png"
                   />
                 </div>
-              </div>
+              </div>  */}
+              <DecorativeBar />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project) => (

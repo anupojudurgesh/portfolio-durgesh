@@ -17,30 +17,16 @@ const Layout = ({ children }) => {
         "
       >
         {/* Background gradients */}
-        <div className="fixed inset-0 pointer-events-none">
+        {/* Background gradients */}
+        <div className="absolute inset-0 pointer-events-none z-0">
           <div className="flex flex-col h-full justify-between">
-            {/* Header gradient */}
             <img
-              className="
-                w-full h-[670px]                  /* desktop */
-                lg:h-[670px]
-                md:h-[520px]                     /* tablets */
-                sm:h-[420px]                     /* large phones */
-                xs:h-[320px]                     /* small phones */
-              "
+              className="w-full  h-[180px] sm:h-[400px] md:h-[370px] lg:h-[670px]"
               alt="Header gradient"
               src="/header-gradient.svg"
             />
-
-            {/* Footer gradient */}
             <img
-              className="
-                w-full h-[659px]
-                lg:h-[659px]
-                md:h-[520px]
-                sm:h-[420px]
-                xs:h-[320px]
-              "
+              className="w-full h-[180px] sm:h-[350px] md:h-[370px] lg:h-[659px]"
               alt="Footer gradient"
               src="/footer-gradient.svg"
             />
