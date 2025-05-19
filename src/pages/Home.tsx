@@ -61,12 +61,12 @@ export const HomeDark = (): JSX.Element => {
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="flex flex-col h-full justify-between">
             <img
-              className="w-full  h-[180px] sm:h-[400px] md:h-[500px] lg:h-[670px]"
+              className="w-full  h-[180px] sm:h-[400px] md:h-[370px] lg:h-[670px]"
               alt="Header gradient"
               src="/header-gradient.svg"
             />
             <img
-              className="w-full h-[180px] sm:h-[350px] md:h-[450px] lg:h-[659px]"
+              className="w-full h-[180px] sm:h-[350px] md:h-[370px] lg:h-[659px]"
               alt="Footer gradient"
               src="/footer-gradient.svg"
             />

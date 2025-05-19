@@ -150,7 +150,7 @@ const Header = () => {
             : "-translate-y-4 opacity-0 invisible"
         }`}
       >
-        <div className="bg-white dark:bg-gray-950 shadow-lg rounded-b-2xl border-t border-gray-200 dark:border-gray-800">
+        <div className="bg-white dark:bg-gray-950 shadow-lg  rounded-b-2xl border-t border-gray-200 dark:border-gray-800">
           <div className="container mx-auto px-1 sm:px-4 py-4">
             <div className="flex">
               {navLinks.map((link) => {
@@ -160,7 +160,7 @@ const Header = () => {
                     key={link.path}
                     to={link.path}
                     onClick={toggleMenu}
-                    className={`px-3 py-2 text-sm font-medium  rounded-full transition-all duration-300 ${
+                    className={`px-3 py-2 text-sm font-medium text-center rounded-full transition-all duration-300 ${
                       isActive
                         ? "bg-clip-text text-transparent bg-gradient-to-br from-pink-400 via-purple-500 to-blue-400 shadow-md"
                         : "text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 "

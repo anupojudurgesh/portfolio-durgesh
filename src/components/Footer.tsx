@@ -91,7 +91,7 @@ export const Footer = (): JSX.Element => {
 
         {/* Dark theme images */}
         <div className="absolute w-[70px] sm:w-[100px] md:w-[127px] h-3.5 top-px left-0 opacity-50 bg-[url(/group-1938.png)] bg-[100%_100%] bg-no-repeat hidden dark:block" />
-        <div className="absolute w-[70px] sm:w-[100px] md:w-[127px] h-3.5 top-px right-0 rotate-180 opacity-50 bg-no-repeat hidden dark:block">
+        <div className="absolute w-[140px] sm:w-[100px] md:w-[127px] h-3.5 top-px right-[-65px]  rotate-180 opacity-50 bg-no-repeat hidden dark:block">
           <img
             className="absolute w-full h-full top-0 left-0 -rotate-180"
             alt="Group"
