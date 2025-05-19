@@ -69,6 +69,7 @@ import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
+import DecorativeBar from "../components/DecorativeBar";
 
 const testimonials = [
   {
@@ -91,8 +92,8 @@ const About = () => {
       <Header />
       <section className="py-10 mt-32 ">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold   mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+          <div className="max-w-3xl mx-auto text-center ">
+            <h1 className="text-4xl md:text-5xl font-bold  mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
               About Me
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-lg mx-auto">
@@ -100,10 +101,10 @@ const About = () => {
               logic.
             </p>
             {/* Decorative bar */}
-            <div className="relative w-[454px] max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-80 mx-auto mt-16 mb-12">
+            {/* <div className="relative w-[454px] max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-80 mx-auto mt-16 mb-12">
               <div className="text-center absolute top-[-6px] bottom-0 left-1/2 transform -translate-x-1/2 text-base text-gray-400">
                 <img
-                  className="w-full dark:hidden"
+                  className="w-full  dark:hidden"
                   alt="Decorative"
                   src="/Vector.png"
                 />
@@ -112,18 +113,18 @@ const About = () => {
                   alt="Decorative"
                   src="/Vectorlight.png"
                 />
-              </div>
-              {/* Light theme images */}
-              <div className="absolute w-[187px] h-3.5 top-[-6px] left-0 opacity-20 bg-[url(/lightbar.png)] bg-[100%_100%] bg-no-repeat dark:hidden" />
-              <div className="absolute w-[127px] h-3.5 top-[-6px] left-[270px] opacity-20 rotate-180 bg-no-repeat dark:hidden">
+              </div> */}
+            {/* Light theme images */}
+            {/* <div className="absolute sm:w-[187px] w-[127px] h-3.5 top-[-6px] left-0 opacity-20 bg-[url(/lightbar.png)] bg-[100%_100%] bg-no-repeat dark:hidden" />
+              <div className="absolute sm:w-[127px] w-[97px] h-3.5 top-[-6px] left-[270px] opacity-20 rotate-180 bg-no-repeat dark:hidden">
                 <img
                   className="absolute w-[127px] h-3.5 top-0 left-0 -rotate-180"
                   alt="Group"
                   src="/lightbar2.png"
                 />
-              </div>
-              {/* Dark theme images */}
-              <div className="absolute w-[187px] h-3.5 top-[-6px] left-0 opacity-30 bg-[url(/group-1938.png)] bg-[100%_100%] bg-no-repeat hidden dark:block" />
+              </div> */}
+            {/* Dark theme images */}
+            {/* <div className="absolute w-[187px] h-3.5 top-[-6px] left-0 opacity-30 bg-[url(/group-1938.png)] bg-[100%_100%] bg-no-repeat hidden dark:block" />
               <div className="absolute w-[127px] h-3.5 top-[-6px] left-[270px] rotate-180 opacity-30 bg-no-repeat hidden dark:block">
                 <img
                   className="absolute w-[127px] h-3.5 top-0 left-0 -rotate-180"
@@ -131,8 +132,9 @@ const About = () => {
                   src="/group-1938-1.png"
                 />
               </div>
-            </div>
+            </div>*/}
           </div>
+          <DecorativeBar />
           <div className="flex flex-col md:flex-row items-center gap-10 max-w-2xl mx-auto">
             {/* Profile Image */}
             {/* <motion.div

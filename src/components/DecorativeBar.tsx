@@ -37,8 +37,8 @@ export default function DecorativeBar() {
     //   </div>
     // </div>
     <div>
-      <div className="flex justify-center items-center w-full">
-        <div className="relative w-[300px] sm:w-[454px] max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-80 mt-16 mb-4">
+      <div className="flex justify-center items-center w-full ">
+        <div className="relative w-[300px] sm:w-[454px] max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-80 mt-12 mb-8">
           <div className="text-center absolute top-[-6px] bottom-0 left-1/2 transform -translate-x-1/2 text-base text-gray-400">
             <img
               className="w-full dark:hidden"
