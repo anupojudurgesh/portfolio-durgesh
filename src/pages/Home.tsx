@@ -43,9 +43,22 @@ import Footer from "../components/Footer";
 export const HomeDark = (): JSX.Element => {
   return (
     <div className="bg-transparent flex flex-col items-center w-full">
-      <div className="relative w-full max-w-full overflow-hidden bg-darkmain-bg">
+      <div
+        className="
+    relative w-full max-w-full min-h-screen overflow-hidden
+    bg-light-noise dark:bg-dark-noise                       /* background images */
+    bg-opacity-5 dark:bg-opacity-0                          /* normal bg-color opacity */
+    bg-repeat bg-fixed bg-[length:auto_auto]
+    before:absolute before:inset-0
+    before:bg-light-noise dark:before:bg-dark-noise         /* same images */
+    before:opacity-10 dark:before:opacity-10                /* ✅ image opacity here */
+    before:pointer-events-none before:z-0
+  "
+      >
+        {/* your content */}
+
         {/* Background gradients */}
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none z-0">
           <div className="flex flex-col h-full justify-between">
             <img
               className="w-full h-[670px]"
@@ -61,7 +74,7 @@ export const HomeDark = (): JSX.Element => {
         </div>
 
         {/* Main content */}
-        <div className=" max-w-3xl mx-auto flex-1 z-10 ">
+        <div className="max-w-3xl mx-auto flex-1 z-10 relative">
           <Header />
           <Hero />
           <Projects />
