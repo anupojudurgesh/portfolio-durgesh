@@ -15,7 +15,6 @@ import Footer from "../components/Footer";
 //         alt="Header gradient"
 //         src="/header-gradient.svg"
 //       />
-
 //       {/* Footer Gradient */}
 //       <img
 //         className="absolute bottom-0 left-0 w-full h-[659px] pointer-events-none z-0"
@@ -37,7 +36,6 @@ import Footer from "../components/Footer";
 //     </div>
 //   );
 // };
-
 // export default Home;
 
 export const HomeDark = (): JSX.Element => {
@@ -56,7 +54,6 @@ export const HomeDark = (): JSX.Element => {
   "
       >
         {/* your content */}
-
         {/* Background gradients */}
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="flex flex-col h-full justify-between">

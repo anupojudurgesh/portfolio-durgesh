@@ -5,9 +5,9 @@ const Hero = () => {
     <section className="pt-28 pb-10 md:pt-36 md:pb-2 relative overflow-hidden mt-6 sm:mt-8">
       <div className="container mx-auto px-3 sm:px-4 md:px-4 relative z-10">
         {/* Designer, Image, and Coder Layout */}
-        <div className="flex  md:flex-row items-center justify-between gap-8 sm:gap-12 md:gap-24">
+        <div className="flex  md:flex-row items-center justify-between gap-8 sm:gap-12 md:gap-24 ">
           {/* Designer Section */}
-          <div className="w-[30%] md:w-[30%] sm:w-[20%] flex  items-center mb-6 md:mb-0 p-4 px-6">
+          <div className="w-[30%] md:w-[30%] sm:w-[20%] flex items-center mb-6 md:mb-0 p-2">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -25,7 +25,7 @@ const Hero = () => {
           </div>
 
           {/* Coder Section */}
-          <div className="w-[30%] md:w-[30%] flex flex-col items-center mb-6 pr-4 mt-2  sm:mb-10 md:mb-0 p-4">
+          <div className="w-[30%] md:w-[30%] sm:w-[20%] flex flex-col items-center mb-6 pr-4 mt-2 sm:mb-10 md:mb-0 p-2">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -52,7 +52,7 @@ const Hero = () => {
           <img
             src="/hero.png"
             alt="Hero"
-            className="w-full sm:max-w-md md:max-w-none ml-2 absolute top-[-110px] sm:top-[-120px] md:top-[-150px] left-0 right-0 bottom-0 object-cover inset-0 -z-30"
+            className="w-full sm:max-w-md md:max-w-none absolute top-[-110px] sm:top-[-120px] md:top-[-150px] left-0 right-0 bottom-0 object-cover inset-0 -z-30"
           />
         </motion.div>
       </div>
@@ -62,7 +62,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="mt-36 sm:mt-56 md:mt-10 max-w-3xl mx-auto text-left sm:text-center px-4 sm:p-0"
+        className="mt-32 sm:mt-56 md:mt-10 max-w-3xl mx-auto text-left sm:text-center px-4 sm:p-0"
       >
         <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed mt-12 sm:mt-72 md:mt-[300px] px-2 sm:px-8">
           Hi! I’m{" "}
