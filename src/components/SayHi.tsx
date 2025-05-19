@@ -17,25 +17,25 @@ const SayHiByAnima = () => {
   ];
 
   return (
-    <section className="flex w-full max-w-4xl mx-auto my-16 relative">
+    <section className="flex w-full py-6 sm:py-10 px-6  max-w-4xl mx-auto  relative">
       <div
         className="w-full rounded-[20px] px-8 
   bg-gradient-to-r from-[rgba(226,224,253,0.5)] to-[rgba(241,222,228,0.55)]
   dark:from-[rgba(30,28,50,0.5)] dark:to-[rgba(43,22,29,0.55)]"
       >
-        <div className="flex flex-col md:flex-row items-center justify-between p-8">
+        <div className="flex flex-col md:flex-row items-center justify-between sm:px-6 sm:py-10 px-4 py-8">
           {/* Left section */}
           <div className="w-full md:w-[314px]">
-            <h2 className="bg-gradient-to-br from-[rgba(240,104,68,1)] via-[rgba(238,76,84,1)] via-[rgba(212,94,149,1)] via-[rgba(156,108,166,1)] to-[rgba(101,131,193,1)] bg-clip-text text-transparent font-bold text-[44px] tracking-[-0.88px] leading-[52.8px] font-['Inter',Helvetica]">
+            <h2 className=" bg-gradient-to-br from-[rgba(240,104,68,1)] via-[rgba(238,76,84,1)] via-[rgba(212,94,149,1)] via-[rgba(156,108,166,1)] to-[rgba(101,131,193,1)] bg-clip-text text-transparent font-bold text-5xl tracking-[-0.88px] leading-[52.8px] text-center sm:text-left">
               Say hi!
             </h2>
 
-            <p className="mt-4 opacity-80  font-medium text-[21px] tracking-[-0.36px] leading-8">
+            <p className="mt-4 opacity-80  text-center sm:text-left font-medium text-xl tracking-[-0.36px] leading-8">
               Want to create something awesome? Or, you have any query? Drop an
               email or tweet.
             </p>
 
-            <div className="flex items-start gap-[39px] mt-6">
+            <div className="flex sm:items-start items-center sm:gap-6 sm:mt-6  mt-6 flex-col sm:flex-row">
               {contactOptions.map((option, index) => (
                 <div
                   key={index}

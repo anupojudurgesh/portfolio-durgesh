@@ -1,11 +1,13 @@
+import { Link, useLocation } from "react-router-dom";
+
 export const Footer = (): JSX.Element => {
   // Footer navigation links data
   const navLinks = [
-    { text: "home", isActive: false },
-    { text: "work", isActive: false },
-    { text: "services", isActive: false },
-    { text: "about", isActive: false },
-    { text: "contact", isActive: false },
+    { text: "home", path: "/" },
+    { text: "work", path: "/work" },
+    { text: "services", path: "/services" },
+    { text: "about", path: "/about" },
+    { text: "contact", path: "/contact" },
   ];
 
   return (
@@ -26,15 +28,33 @@ export const Footer = (): JSX.Element => {
         </div>
 
         {/* Navigation links */}
-        <nav className="flex flex-wrap items-center gap-4 justify-center">
-          {navLinks.map((link, index) => (
-            <div
-              key={index}
-              className={`font-12-12-med text-darklight-gray "opacity-40`}
-            >
-              {link.text}
-            </div>
-          ))}
+        <nav className="flex flex-wrap items-center gap-1 sm:gap-6 justify-center">
+          {navLinks.map((link, index) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Link
+                key={index}
+                to={link.path}
+                className={`
+                  px-2 py-1
+                  rounded
+                  transition
+                  text-darklight-gray
+                  opacity-50
+                  hover:opacity-80
+                  hover:text-black
+                  dark:hover:text-white
+                  ${
+                    isActive
+                      ? "opacity-100 text-black dark:text-white font-bold underline underline-offset-4"
+                      : ""
+                  }
+                `}
+              >
+                {link.text}
+              </Link>
+            );
+          })}
         </nav>
       </div>
       {/* Footer quote with decorative elements */}
@@ -54,26 +74,26 @@ export const Footer = (): JSX.Element => {
       </div> */}
       {/* Footer quote with decorative elements */}
 
-      <div className="relative w-[454px] max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-20 mx-auto mt-16 mb-12 z-0">
-        <div className="text-center absolute top-[-6px] bottom-0 left-1/2 transform -translate-x-1/2 text-base text-gray-400  ">
+      <div className="relative w-full max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-20 mx-auto mt-8 md:mt-16 mb-8 md:mb-12 z-0 px-2 sm:px-0">
+        <div className="text-center absolute top-[-6px] bottom-0 left-1/2 transform -translate-x-1/2 text-sm md:text-base text-gray-400 whitespace-nowrap w-full">
           Keep it simple, stupid!.
         </div>
 
         {/* Light theme images */}
-        <div className="absolute w-[127px] h-3.5 top-px left-0  bg-[url(/Rightbar.png)] bg-[100%_100%] bg-no-repeat dark:hidden" />
-        <div className="absolute w-[127px] h-3.5 top-px left-[330px] rotate-180  bg-no-repeat dark:hidden">
+        <div className="absolute w-[70px] sm:w-[100px] md:w-[127px] h-3.5 top-px left-0 bg-[url(/Rightbar.png)] bg-[100%_100%] bg-no-repeat dark:hidden" />
+        <div className="absolute w-[70px] sm:w-[100px] md:w-[127px] h-3.5 top-px right-0 rotate-180 bg-no-repeat dark:hidden">
           <img
-            className="absolute w-[127px] h-3.5 top-0 left-0 -rotate-180"
+            className="absolute w-full h-full top-0 left-0 -rotate-180"
             alt="Group"
             src="/Leftbar.png"
           />
         </div>
 
         {/* Dark theme images */}
-        <div className="absolute w-[127px] h-3.5 top-px left-0 opacity-50 bg-[url(/group-1938.png)] bg-[100%_100%] bg-no-repeat hidden dark:block" />
-        <div className="absolute w-[127px] h-3.5 top-px left-[330px] rotate-180 opacity-50 bg-no-repeat hidden dark:block">
+        <div className="absolute w-[70px] sm:w-[100px] md:w-[127px] h-3.5 top-px left-0 opacity-50 bg-[url(/group-1938.png)] bg-[100%_100%] bg-no-repeat hidden dark:block" />
+        <div className="absolute w-[70px] sm:w-[100px] md:w-[127px] h-3.5 top-px right-0 rotate-180 opacity-50 bg-no-repeat hidden dark:block">
           <img
-            className="absolute w-[127px] h-3.5 top-0 left-0 -rotate-180"
+            className="absolute w-full h-full top-0 left-0 -rotate-180"
             alt="Group"
             src="/group-1938-1.png"
           />

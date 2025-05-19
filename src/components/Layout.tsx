@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
           <div className="flex flex-col h-full justify-between">
             {/* Header gradient */}
             <img
-              className="`
+              className="
                 w-full h-[670px]                  /* desktop */
                 lg:h-[670px]
                 md:h-[520px]                     /* tablets */
@@ -38,8 +38,8 @@ const Layout = ({ children }) => {
                 w-full h-[659px]
                 lg:h-[659px]
                 md:h-[520px]
-                sm:h-[500px]
-                xs:h-[400px]
+                sm:h-[420px]
+                xs:h-[320px]
               "
               alt="Footer gradient"
               src="/footer-gradient.svg"
@@ -51,10 +51,10 @@ const Layout = ({ children }) => {
         <main
           className="
             max-w-4xl mx-auto flex-1 z-10
-            px-4                           /* default side-padding mobile */
-            sm:px-6                        /* a bit wider on phones */
-            md:px-8                        /* tablets */
-            lg:px-0                        /* desktop unchanged */
+            px-4                          
+            sm:px-6                        
+            md:px-8                        
+            lg:px-0                        
           "
         >
           {children}

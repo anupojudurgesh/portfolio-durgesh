@@ -256,10 +256,10 @@ const Projects = () => {
   };
 
   return (
-    <section id="work" className="py-10 ">
+    <section id="work" className="py-6 sm:py-10 px-6 ">
       <div className="container mx-auto  relative z-10">
-        <div className="mb-6 text-start flex justify-between">
-          <h2 className="text-base font-semibold text-gray-600 dark:text-gray-400 opacity-30 uppercase tracking-[.25em] mb-2">
+        <div className="mb-6 text-start flex flex-col sm:flex-row justify-between">
+          <h2 className="text-base font-semibold text-gray-600 dark:text-gray-400 opacity-30 uppercase tracking-[.25em] mb-2 ">
             FEATURED PROJECTS
           </h2>
           <Link
@@ -278,7 +278,7 @@ const Projects = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 gap-6"
         >
           {projects.map((project) => (
             <motion.div
@@ -295,22 +295,22 @@ overflow-hidden transition-transform duration-300 hover:scale-[1.03]
                   hoveredProject === project.id ? "blur-md  " : ""
                 }`}
               >
-                <div className="px-10 py-10 drop-shadow-2xl ">
+                <div className="sm:px-8 sm:py-6 px-2 py-4  drop-shadow-2xl ">
                   <div className="aspect-w-1 aspect-h-1 w-full flex justify-center items-end ">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-[150px] h-[150px] object-cover transition-all duration-300 
+                      className={`sm:w-[150px] sm:h-[150px] w-[100px] h-[100px] object-cover transition-all duration-300 
                       `}
                     />
                     {project.featured && (
-                      <span className="absolute top-8 left-26 bg-purple-600/50 text-white text-xs px-2 py-1 flex rounded-full z-10">
+                      <span className="absolute top-4 sm:top-6 left-26 bg-purple-600/50 text-white text-[8px]  sm:text-xs px-2 py-0.5 sm:px-2 sm:py-1 flex rounded-full z-10">
                         In Progress
                       </span>
                     )}
                   </div>
-                  <div className=" text-center mt-6">
-                    <h4 className="text-gray-700 dark:text-white  text-xl font-bold mb-1">
+                  <div className=" text-center sm:mt-6 mt-2">
+                    <h4 className="text-gray-700 dark:text-white  text-base sm:text-xl font-bold mb-1">
                       {project.title}
                     </h4>
                     {/* <p className="text-gray-500 dark:text-gray-400 text-sm">
@@ -322,7 +322,7 @@ overflow-hidden transition-transform duration-300 hover:scale-[1.03]
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center absolute inset-0 p-10 transition-opacity duration-300">
+              <div className="flex flex-col items-center justify-center absolute inset-0 p-1 sm:p-4 transition-opacity duration-300">
                 <button
                   className={`  text-gray-800 dark:text-white transition-transform duration-300 ${
                     hoveredProject === project.id
@@ -330,10 +330,12 @@ overflow-hidden transition-transform duration-300 hover:scale-[1.03]
                       : "translate-y-8 opacity-0 bg-white dark:bg-gray-800"
                   }`}
                 >
-                  <h4 className="text-white text-xl font-bold mb-1">
+                  <h4 className="text-white sm:text-xl text-base font-bold mb-1">
                     {project.title}
                   </h4>
-                  <p className="text-gray-300 text-sm">{project.description}</p>
+                  <p className="text-gray-300 text-sm sm:text-base">
+                    {project.description}
+                  </p>
                   <div className="flex items-center justify-center mt-2">
                     <MoveUpRight className="w-6 h-6 px-1 py-1 text-gray-100 bg-gray-900 dark:bg-gray-200 dark:text-gray-900 rounded-md " />
                   </div>

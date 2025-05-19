@@ -43,17 +43,21 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-12 left-0 right-0 z-50 transition-all duration-300 max-w-[700px] mx-auto rounded-full px-6 py-4 ${
+      className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 
+      mx-6 sm:mx-4 md:mx-auto sm:mt-8
+      max-w-full sm:max-w-[90vw] md:max-w-[700px]
+      rounded-2xl md:rounded-full px-3 sm:px-6 py-4 sm:py-4
+      ${
         isScrolled
           ? "bg-white/70 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-200/10 dark:border-gray-100/5"
           : "bg-white/30 dark:bg-gray-900/30 border border-gray-200/10 dark:border-gray-400/10 backdrop-blur-xl "
       }`}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between flex-wrap gap-y-2">
         {/* Logo */}
         <Link
           to="/"
-          className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500"
+          className="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500"
         >
           durgesh
         </Link>
@@ -67,11 +71,11 @@ const Header = () => {
                 key={link.path}
                 to={link.path}
                 className={`relative text-base font-medium transition-all duration-300 ease-in-out tracking-tight
-                  ${
-                    isActive
-                      ? "text-gray-900 dark:text-white"
-                      : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300  "
-                  } hover:scale-105`}
+                ${
+                  isActive
+                    ? "text-gray-900 dark:text-white"
+                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300  "
+                } hover:scale-105`}
               >
                 {link.label}
               </Link>
@@ -80,7 +84,7 @@ const Header = () => {
         </div>
 
         {/* Icons Section */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-3 sm:space-x-4">
           {/* Social Icons */}
           <a
             href="https://youtube.com"
@@ -108,12 +112,12 @@ const Header = () => {
           </a>
 
           {/* Divider */}
-          <div className="h-5 w-px bg-gray-400 dark:bg-gray-600 mx-2" />
+          <div className="h-5 w-px bg-gray-400 dark:bg-gray-600 mx-1 sm:mx-2" />
 
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className=" p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-900 transition-colors"
+            className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-900 transition-colors"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (
@@ -125,7 +129,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+            className="md:hidden rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -146,9 +150,9 @@ const Header = () => {
             : "-translate-y-4 opacity-0 invisible"
         }`}
       >
-        <div className="bg-white dark:bg-gray-900 shadow-lg rounded-b-2xl border-t border-gray-200 dark:border-gray-800">
-          <div className="container mx-auto px-4 py-4">
-            <div className="flex flex-col space-y-4">
+        <div className="bg-white dark:bg-gray-950 shadow-lg rounded-b-2xl border-t border-gray-200 dark:border-gray-800">
+          <div className="container mx-auto px-1 sm:px-4 py-4">
+            <div className="flex">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path;
                 return (
@@ -156,10 +160,10 @@ const Header = () => {
                     key={link.path}
                     to={link.path}
                     onClick={toggleMenu}
-                    className={`px-4 py-2 rounded-full transition-all duration-300 ${
+                    className={`px-3 py-2 text-sm font-medium  rounded-full transition-all duration-300 ${
                       isActive
-                        ? "bg-gradient-to-r from-purple-500 to-indigo-600 text-white shadow-md"
-                        : "text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                        ? "bg-clip-text text-transparent bg-gradient-to-br from-pink-400 via-purple-500 to-blue-400 shadow-md"
+                        : "text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 "
                     }`}
                   >
                     {link.label}

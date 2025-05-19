@@ -90,7 +90,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="about" className="">
+    <section id="about" className="py-6 sm:py-10 px-6 ">
       <div className="container mx-auto">
         <div className="mb-6 text-start">
           <h2 className="text-base font-semibold text-gray-600 dark:text-gray-400 opacity-30 uppercase tracking-[.25em] mb-2">

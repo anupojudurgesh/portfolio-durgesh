@@ -2,41 +2,40 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-12 md:pt-36 md:pb-2 relative overflow-hidden mt-10">
-      <div className="container mx-auto px-4 md:px-4 relative z-10">
+    <section className="pt-28 pb-10 md:pt-36 md:pb-2 relative overflow-hidden mt-6 sm:mt-8">
+      <div className="container mx-auto px-3 sm:px-4 md:px-4 relative z-10">
         {/* Designer, Image, and Coder Layout */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-24">
-          {/* Coder Text */}
-          <div className="w-[50%] md:w-[30%] flex flex-col items-center">
-            {/* Designer Section */}
+        <div className="flex  md:flex-row items-center justify-between gap-8 sm:gap-12 md:gap-24">
+          {/* Designer Section */}
+          <div className="w-[30%] md:w-[30%] sm:w-[20%] flex  items-center mb-6 md:mb-0 p-4 px-6">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <h2 className="text-2xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-white text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-1 sm:mb-4 text-gray-800 dark:text-white text-center">
                 designer!
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm md:text-sm text-center">
+              <p className="text-gray-600 dark:text-gray-300 mb-2 sm:mb-4 text-[10px] leading-3 sm:text-base md:text-sm text-center">
                 Crafting complex ideas into elegant, intuitive designs users
                 love.
               </p>
             </motion.div>
           </div>
 
-          {/* Coder Section / Hero Image */}
-          <div className="w-[50%] md:w-[30%] flex flex-col items-center">
+          {/* Coder Section */}
+          <div className="w-[30%] md:w-[30%] flex flex-col items-center mb-6 pr-4 mt-2  sm:mb-10 md:mb-0 p-4">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <h2 className="text-5xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-white text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-1 sm:mb-4 text-gray-800 dark:text-white text-center">
                 {"<coder>"}
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4 text-center text-sm md:text-sm">
+              <p className="text-gray-600 dark:text-gray-300 mb-2 sm:mb-4 text-[10px] leading-3 sm:text-base md:text-sm text-center">
                 Bringing designs to life with clean, efficient, and functional
                 code.
               </p>
@@ -53,7 +52,7 @@ const Hero = () => {
           <img
             src="/hero.png"
             alt="Hero"
-            className="w-full absolute top-[-150px] left-0 right-0 bottom-0 object-cover inset-0 -z-30"
+            className="w-full sm:max-w-md md:max-w-none ml-2 absolute top-[-110px] sm:top-[-120px] md:top-[-150px] left-0 right-0 bottom-0 object-cover inset-0 -z-30"
           />
         </motion.div>
       </div>
@@ -63,9 +62,9 @@ const Hero = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="mt-10 max-w-3xl mx-auto text-center"
+        className="mt-36 sm:mt-56 md:mt-10 max-w-3xl mx-auto text-left sm:text-center px-4 sm:p-0"
       >
-        <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed mt-[300px] px-8">
+        <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed mt-12 sm:mt-72 md:mt-[300px] px-2 sm:px-8">
           Hi! I’m{" "}
           <span className="bg-gradient-to-r from-[#4AB1F1] via-[#566CEC] via-[#D749AF] to-[#FF7C51] bg-clip-text text-transparent font-semibold">
             Durgesh Anupoju!
@@ -75,7 +74,7 @@ const Hero = () => {
           goes into building stuff for brands and making digital ideas come to
           life.
         </p>
-        <p className="text-base text-gray-400">
+        <p className="text-sm sm:text-base text-gray-400 px-2 sm:px-8">
           Building what I love at{" "}
           <a
             href="https://www.smdigitalx.com"
@@ -87,7 +86,6 @@ const Hero = () => {
           </a>
         </p>
       </motion.div>
-
       {/* Background Gradients */}
     </section>
   );
