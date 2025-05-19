@@ -90,7 +90,7 @@ const About = () => {
   return (
     <Layout>
       <Header />
-      <section className="py-10 mt-32 ">
+      <section className="py-10 mt-20 sm:mt-32 px-2 sm:px-6 md:px-8 ">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center ">
             <h1 className="text-4xl md:text-5xl font-bold  mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
