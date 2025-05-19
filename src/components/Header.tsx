@@ -150,9 +150,9 @@ const Header = () => {
             : "-translate-y-4 opacity-0 invisible"
         }`}
       >
-        <div className="bg-white dark:bg-gray-950 shadow-lg mt-2 flex justify-center text-center  rounded-2xl border-t border-gray-200 dark:border-gray-800">
-          <div className="container mx-auto px-1 sm:px-4 py-4">
-            <div className="flex">
+        <div className="bg-white dark:bg-gray-950 shadow-lg mt-2 flex justify-center text-center rounded-full  border-t border-gray-200 dark:border-gray-800">
+          <div className="container mx-auto px-1 sm:px-6 py-2">
+            <div className="flex justify-center w-full">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path;
                 return (
