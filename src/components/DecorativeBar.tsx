@@ -53,8 +53,8 @@ export default function DecorativeBar() {
           </div>
 
           {/* Light theme images */}
-          <div className="absolute w-[187px] h-3.5 top-[-6px] left-1/2 sm:left-0 -translate-x-1/2 sm:translate-x-0 opacity-20 bg-[url(/lightbar.png)] bg-[100%_100%] bg-no-repeat dark:hidden" />
-          <div className="absolute w-[127px] h-3.5 top-[-6px] left-1/2 sm:left-[270px] -translate-x-1/2 sm:translate-x-0 opacity-20 rotate-180 bg-no-repeat dark:hidden">
+          <div className="absolute w-[187px] h-3.5 top-[-6px] left-[25px] sm:left-0 -translate-x-1/2 sm:translate-x-0 opacity-30 bg-[url(/lightbar.png)] bg-[100%_100%] bg-no-repeat dark:hidden" />
+          <div className="absolute w-[127px] h-3.5 top-[-6px] right-[-75px] sm:left-[270px] -translate-x-1/2 sm:translate-x-0 rotate-180 opacity-30 bg-no-repeat dark:hidden">
             <img
               className="absolute w-[127px] h-3.5 top-0 left-0 -rotate-180"
               alt="Group"

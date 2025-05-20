@@ -12,7 +12,7 @@ const projects = [
     description: "AI-powered tool to generate and run API test cases",
     image: "/APIGen2.png",
     year: "2024 - Present",
-    link: "https://example.com",
+    link: "https://apigen.soilsoft.ai/",
     featured: true,
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     description: "Creative and print-ready labels for product branding",
     image: "/label design.png",
     year: 2025,
-    link: "https://example.com",
+    link: "https://www.behance.net/gallery/226277819/Label-Design",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const projects = [
     description: "Responsive site to explore and book travel packages",
     image: "/travel website2.png",
     year: 2025,
-    link: "https://example.com",
+    link: "https://zennationals.com/",
   },
   {
     id: 4,
@@ -40,16 +40,17 @@ const projects = [
     description: "Unique logo concepts crafted for strong brand recall",
     image: "/logos.png",
     year: 2023,
-    link: "https://example.com",
+    link: "https://www.behance.net/gallery/226278863/Logo-Design",
   },
   {
     id: 5,
     title: "Static Websites",
     category: "Development",
-    description: "Clean and fast-loading websites built with HTML/CSS",
+    description:
+      "Clean and fast-loading websites built with Elementor/Wordpress",
     image: "/websites.png",
     year: 2024,
-    link: "https://example.com",
+    link: "https://www.behance.net/gallery/226282517/Website-Design",
   },
   {
     id: 6,
@@ -58,7 +59,7 @@ const projects = [
     description: "Elegant layouts for promotional business brochures",
     image: "brouchure.png",
     year: 2024,
-    link: "https://example.com",
+    link: "https://www.behance.net/gallery/226279133/Brouchure-Design",
   },
 ];
 
@@ -117,7 +118,9 @@ overflow-hidden transition-transform duration-300 hover:scale-[1.03]
             >
               <div
                 className={`relative *: ${
-                  hoveredProject === project.id ? "blur-md  " : ""
+                  hoveredProject === project.id
+                    ? "blur-lg bg-white dark:bg-black/50"
+                    : ""
                 }`}
               >
                 <div className="sm:px-8 sm:py-6 px-2 py-4  drop-shadow-2xl ">
@@ -147,22 +150,29 @@ overflow-hidden transition-transform duration-300 hover:scale-[1.03]
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center absolute inset-0 p-1 sm:p-4 transition-opacity duration-300">
+              <div className="flex flex-col items-center justify-center   absolute inset-0 p-1 sm:p-4 sm:px-8 transition-opacity duration-300">
                 <button
-                  className={`  text-gray-800 dark:text-white transition-transform duration-300 ${
+                  className={`  text-gray-800 dark:text-white transition-transform transform duration-300 ${
                     hoveredProject === project.id
                       ? "translate-y-0 opacity-100"
                       : "translate-y-8 opacity-0 bg-white dark:bg-gray-800"
                   }`}
                 >
-                  <h4 className="text-white sm:text-xl text-base font-bold mb-1">
+                  <h4 className="text-white dark:text-white sm:text-xl text-base font-bold mb-1">
                     {project.title}
                   </h4>
-                  <p className="text-gray-300 text-sm sm:text-base">
+                  <p className="text-gray-300 text-sm  sm:text-base">
                     {project.description}
                   </p>
                   <div className="flex items-center justify-center mt-2">
-                    <MoveUpRight className="w-6 h-6 px-1 py-1 text-gray-100 bg-gray-900 dark:bg-gray-200 dark:text-gray-900 rounded-md " />
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${project.title}`}
+                    >
+                      <MoveUpRight className="w-6 h-6 px-1 py-1 text-gray-100 bg-gray-900 dark:bg-gray-200 dark:text-gray-900 rounded-md " />
+                    </a>
                   </div>
                 </button>
               </div>

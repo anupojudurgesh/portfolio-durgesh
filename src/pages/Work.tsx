@@ -153,7 +153,7 @@ const Work = () => {
                   )}
                   <div className="absolute inset-0 backdrop-blur-2xl bg-gradient-to-t from-black/60 to-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="p-6 flex items-center justify-center">
-                      <div className=" mt-16">
+                      <div className=" mt-16 sm:mt-16">
                         <div className="text-center">
                           <h3 className="text-xl font-semibold text-white mb-2">
                             {project.title}

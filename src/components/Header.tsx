@@ -87,7 +87,7 @@ const Header = () => {
         <div className="flex items-center space-x-3 sm:space-x-4">
           {/* Social Icons */}
           <a
-            href="https://youtube.com"
+            href="https://wa.me/917569259998"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-300 hover:text-green-500"
@@ -95,7 +95,7 @@ const Header = () => {
             <FaWhatsapp className="w-5 h-5" />
           </a>
           <a
-            href="https://figma.com"
+            href="https://www.instagram.com/durgesh.psd/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-300 hover:text-pink-500"
@@ -103,7 +103,7 @@ const Header = () => {
             <Instagram className="w-5 h-5" />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://github.com/anupojudurgesh"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-300 hover:text-gray-500"
