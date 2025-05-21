@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import {
@@ -14,12 +13,13 @@ import {
 import { Youtube, Twitter } from "lucide-react";
 import { FaFacebook, FaFigma, FaWhatsapp } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
-
+import { useState, useEffect } from "react";
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const [showMobileMsg, setShowMobileMsg] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +28,27 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const notified = sessionStorage.getItem("mobileMsgShown");
+    const checkMobile = () => {
+      if (window.innerWidth < 768 && !notified) {
+        setShowMobileMsg(true);
+        sessionStorage.setItem("mobileMsgShown", "true");
+      }
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Auto-hide notification after 2.5 seconds
+  useEffect(() => {
+    if (showMobileMsg) {
+      const timer = setTimeout(() => setShowMobileMsg(false), 2500);
+      return () => clearTimeout(timer);
+    }
+  }, [showMobileMsg]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -46,6 +67,48 @@ const Header = () => {
       {/* <Link to="/" className="">
         <img src="/logo2.png" alt="Logo" className="w-12  sm:w-24 sm:h" />
       </Link> */}
+
+      {showMobileMsg && (
+        <div className="fixed top-0 left-0 w-full z-[9999] flex justify-center items-center transition-all duration-500">
+          <div
+            className={`
+              relative flex items-center justify-center w-[95vw] max-w-md mx-auto mt-3
+              text-white text-center py-3 px-4 text-sm font-semibold shadow-2xl rounded-2xl
+              animate-fade-in-down
+              ${
+                // Custom background for light/dark
+                theme === "dark"
+                  ? "dark:[background:linear-gradient(90deg,rgba(30,28,50,0.5)_0%,rgba(43,22,29,0.5)_100%)]"
+                  : "[background:linear-gradient(90deg,rgba(30,28,50,0.05)_0%,rgba(43,22,29,0.05)_100%)]"
+              }
+              backdrop-blur-md bg-opacity-80
+            `}
+            style={{
+              background:
+                theme === "dark"
+                  ? "linear-gradient(90deg,rgba(30,28,50,0.5)_0%,rgba(43,22,29,0.5)_100%)"
+                  : "linear-gradient(90deg,rgba(30,28,50,0.05)_0%,rgba(43,22,29,0.05)_100%)",
+              color: theme === "dark" ? "#fff" : "#222",
+              backdropFilter: "blur(10px)",
+            }}
+          >
+            <span className="flex-1">
+              🌈 For the{" "}
+              <span className="font-bold underline">best experience</span>,
+              <br />
+              please view this website on a{" "}
+              <span className="text-yellow-400 font-bold">desktop</span>! 🚀
+            </span>
+            <button
+              className="absolute top-2 right-2 text-white hover:text-gray-200 transition"
+              onClick={() => setShowMobileMsg(false)}
+              aria-label="Close notification"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      )}
       <header
         className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 
       mx-6 sm:mx-4 md:mx-auto sm:mt-8
