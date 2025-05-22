@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 const RedirectToExternal = () => {
   useEffect(() => {
-    window.location.replace("https://gray-tarsier-942800.hostingersite.com/");
+    window.location.replace("https://smdigitalx.com/");
   }, []);
 
   return (
