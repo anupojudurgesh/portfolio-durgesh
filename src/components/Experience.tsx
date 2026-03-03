@@ -69,12 +69,34 @@
 
 import { motion } from "framer-motion";
 
+function descriptionWithSemibold(text: string, phrases: string[]) {
+  if (phrases.length === 0) return text;
+  const parts: React.ReactNode[] = [];
+  let remaining = text;
+  let key = 0;
+  for (const phrase of phrases) {
+    const idx = remaining.indexOf(phrase);
+    if (idx !== -1) {
+      parts.push(
+        remaining.slice(0, idx),
+        <span key={key++} className="font-semibold text-gray-800 dark:text-gray-300">
+          {phrase}
+        </span>
+      );
+      remaining = remaining.slice(idx + phrase.length);
+    }
+  }
+  parts.push(remaining);
+  return parts;
+}
+
 const experiences = [
   {
     id: 1,
     title: "Building at scale — ERP and API platforms",
     description:
       "At SoilSoft Technologies I architected 12+ ERP modules in React and TypeScript for a workforce system serving 8,000+ workers across 80+ factories, and built the frontend for APIGen — real-time API testing with SignalR and analytics dashboards. Full ownership of auth (JWT, MFA, RBAC), performance tuning, and production deployment.",
+    semibold: ["SoilSoft Technologies"],
     date: "Feb 2024 – Present",
     role: "Software Engineer • Frontend ",
   },
@@ -83,6 +105,7 @@ const experiences = [
     title: "Agency lead — assessment and education products",
     description:
       "Founding SMDigitalX and shipping production systems: TestVerse for 500+ concurrent students with live code execution and anti-cheat, and a multi-branch Education ERP with 70+ API endpoints and a reusable component library. Every project from first brief to live deployment on VPS, Nginx, and SSL.",
+    semibold: ["SMDigitalX"],
     date: "Aug 2025 – Present",
     role: "Founder • Lead Frontend Developer",
   },
@@ -91,6 +114,7 @@ const experiences = [
     title: "Design to code — 30+ projects and 10+ live sites",
     description:
       "Started in graphic design in 2017, moved to WordPress and Elementor in 2024, then to custom React builds in 2025. Delivered 30+ branding and UI projects and 10+ production websites — Figma, Illustrator, Photoshop, and now React and TypeScript — all owned end to end.",
+    semibold: [],
     date: "2017 – Present",
     role: "Freelance • Design & Development",
   },
@@ -122,7 +146,10 @@ const Experience = () => {
                     {exp.title}
                   </h4>
                   <p className="text-gray-600 dark:text-gray-400/80">
-                    {exp.description}
+                    {descriptionWithSemibold(
+                      exp.description,
+                      exp.semibold ?? []
+                    )}
                   </p>
                 </div>
                 <div className="">
